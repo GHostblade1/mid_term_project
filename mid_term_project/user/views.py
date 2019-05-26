@@ -1,3 +1,5 @@
+import re
+
 from django.db import transaction
 from django.shortcuts import render, redirect, HttpResponse
 from main.models import TUser
@@ -55,16 +57,17 @@ def user_confirm(request):
     :return:
     """
     user_code = request.GET.get('code')
+    user = request.GET.get('user')
     confirm = models.Confirm_string.objects.get(code=user_code)
     if confirm:
         # 将用户状态改为可登陆
-        TUser.objects.filter()
-
+        request.session['user'] = user
+        TUser.objects.filter(email_addr=user)[0].state = 1
         # 删除验证码
         return redirect('user:register_ok_re')
     else:
         #return redirect('user:register_ok')
-        return HttpResponse('sb')
+        return HttpResponse('验证失败')
 
 def login(request):
     #request.session['register'] = 'ok'
@@ -112,12 +115,13 @@ def register_ok(request):
                     print(101, new_user)
                     code = make_confirm_string(new_user)
                     send_email(email_addr, code)
+                    print('user117', '邮件发送成功！')
                     return render(request, 'register confirm.html')
                 else:
                     return HttpResponse('两次输入的密码不一致')
     except:
         print('出现异常！')
-        return HttpResponse('<h1>请输入正确的邮箱地址</h1>'
+        return HttpResponse('<h1>注册异常</h1>'
                             '<a href="/user/register/">点击跳转回到注册界面！</a>')
 
 def login_logic(request):
@@ -128,14 +132,21 @@ def login_logic(request):
             autologin = request.POST.get('autologin')
             txt_vcode1 = request.POST.get('txt_vcode')
             txt_vcode2 = request.session.get('code')
-            #print(53, txt_vcode2, txt_vcode1)
+            print('user134', txt_vcode2, txt_vcode1)
             #print(48, autologin)
             #print(24, name, type(name), password)
-            user = TUser.objects.filter(email_addr=name)
+            user = TUser.objects.filter(email_addr=name)[0]
+            salt = user.null_1
+            user_password = user.null_2
+            print('user140', user_password, type(user_password))
+            h = hashlib.md5()
+            writing = password + salt
+            h.update(writing.encode())
+            print('user144', str(h.digest()), type(h.digest()))
             #print(26, user)
             print(126, request.session.get('html'))
             if user:
-                if user[0].password == password and txt_vcode1.lower() == txt_vcode2.lower():
+                if str(h.digest()) == user_password and txt_vcode1.lower() == txt_vcode2.lower():
                     request.session['login'] = 'ok'
                     request.session['user'] = name
                     res = redirect('main:index')
@@ -173,10 +184,21 @@ def reg_check_name(request):
     name = request.GET.get('name')
     #print(46, name)
     user = TUser.objects.filter(email_addr=name)
+
+    def verifyEmail(email):
+        pattern = r'^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$'
+
+        if re.match(pattern, email) is not None:
+            return 1
+        else:
+            return 0
     if user:
         return HttpResponse('1')
     else:
-        return HttpResponse('0')
+        if verifyEmail(name):
+            return HttpResponse('2')
+        else:
+            return HttpResponse('0')
 
 
 def check_pwd(request):

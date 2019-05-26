@@ -39,7 +39,7 @@
 								<tbody><tr>
 									<td class="t">邮箱</td>
 									<td class="z_index2">
-										<input onkeyup="chekusername()" name="txt_username" id="txt_username" autocomplete="off" maxlength="40" tabindex="1" value="" placeholder="请输入您的邮箱或手机号码" class="text" type="text"><span id="spn_username_ok"  style="display: inline-block;"></span><span id="spn_username_ok1"></span>
+										<input onblur="chekusername()" name="txt_username" id="txt_username" autocomplete="off" maxlength="40" tabindex="1" value="" placeholder="请输入您的邮箱" class="text" type="text"><span id="spn_username_ok"  style="display: inline-block;"></span><span id="spn_username_ok1"></span>
 										<span id="J_tipUsername" class="cue" style="display: none">此手机号已注册，请更换其它手机号，或使用该&nbsp;<a href="signin.php?Email=15901551248" name="mobile_login _link" class="more">手机号登录</a></span>
 										<ul class="email_select" id="select_emaildomain" style="display: none;"><li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin=""></li><li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin="@qq.com"></li><li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin="@163.com"></li>
                                         <li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin="@126.com"></li><li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin="@sina.com"></li> <li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin="@hotmail.com"></li><li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin="@sohu.com"></li> <li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin="@gmail.com"></li><li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin="@tom.com"></li> <li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin="@139.com"></li><li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin="@21cn.com"></li> <li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin="@yeah.net"></li><li onmouseout="this.className=&quot;&quot;" onmouseover="this.className=&quot;hover_domain&quot;" title="" domin="@sina.cn"></li></ul>
@@ -68,7 +68,7 @@
 								<tr>
 									<td class="t">确认密码</td>
 									<td>
-										<input onkeyup="check_repwd()" id="txt_repassword" name="txt_repassword" onpaste="return false" tabindex="3" class="text" maxlength="20" type="password"><span id="spn_repassword_ok"  ></span>
+										<input onblur="check_repwd()" id="txt_repassword" name="txt_repassword" onpaste="return false" tabindex="3" class="text" maxlength="20" type="password"><span id="spn_repassword_ok"  ></span>
 										<span id="J_tipSurePassword" class="cue"></span>
 									</td>
 								</tr>								
@@ -83,10 +83,10 @@
 									<!-- 图形验证码 -->
 									<td class="t j-vcode">验证码</td>
 									<td class="j-vcode">
-                                        <input class="text pin" id="txt_vcode" onblur="check_captcha()" name="txt_vcode" autocomplete="off" placeholder="请输入验证码" maxlength="4" tabindex="5" type="text">
+                                        <input class="text pin" id="txt_vcode" onkeyup="check_captcha()" name="txt_vcode" autocomplete="off" placeholder="请输入验证码" maxlength="4" tabindex="5" type="text">
                                         <a class="code_pic" id="vcodeImgWrap" name="change_code_img" href="javascript:void(0);">
                                             <img id="imgVcode" title="点击更换验证码" alt="点击更换验证码" src="{% url 'user:get_captcha' %}" width="84" height="37" onclick="getNew()">
-
+                                            <input type="hidden" id="input_check_captcha1" value="0">
                                             <span>   </span>
                                         </a>
                                         <a id="vcodeImgBtn" name="change_code_link" class="code_picww" href="javascript:void(0);" onclick="getNew()">换张图</a>
@@ -196,9 +196,10 @@
 </div>
 <script>
     function register() {
-        var re_name = document.getElementById('hdn_password').value
+        var re_name = document.getElementById('hdn_username').value
         var re_pwd = document.getElementById('hdn_password').value
-        if(re_name == '1' && re_pwd =='1' ){
+        var re_capt = document.getElementById('input_check_captcha1').value
+        if(re_name == '1' && re_pwd =='1' && re_capt == '1' ){
             document.getElementById('J_submitRegister').style.display='none';
             document.getElementById('J_submitRegisterUnclick').style.display='block';
             document.getElementById('register_form').submit()
@@ -228,13 +229,17 @@
                 console.log('text='+text);
                 if (text=='1'){
                     icon.setAttribute('class','icon_wrong')
-                    icon1.innerHTML = '邮箱地址已存在！'
+                    icon1.innerHTML = '邮箱地址已注册！'
 {#                    document.getElementById('J_submitRegister').onclick = function(){alert("用户名已存在！"); };#}
-                    document.getElementById('').value = '0'
+                    document.getElementById('hdn_username').value = '0'
+                }else if(text== '0'){
+                    icon.setAttribute('class','icon_wrong')
+                    document.getElementById('hdn_username').value = '0'
+                    icon1.innerHTML = '请输入正确的邮箱地址！'
                 }else{
                     icon.setAttribute('class','icon_yes')
                     document.getElementById('hdn_username').value = '1'
-                    icon1.innerHTML = '正确的邮箱地址！'
+                    icon1.innerHTML = '邮箱地址可用！'
                 }
             }
         }
