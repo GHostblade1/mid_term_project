@@ -82,10 +82,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mid_term_project',
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'PORT': 3306,
-        'HOST': 'localhost',
+        'USER': '',
+        'PASSWORD': '',
+        'PORT': '',
+        'HOST': '',
     }
 }
 
@@ -143,6 +143,6 @@ EMAIL_HOST = 'smtp.sina.com'
 # smtp服务端口，默认25
 EMAIL_PORT = 25
 # 你在发送服务器的用户名；
-EMAIL_HOST_USER = 'king17660636600@sina.com'
+EMAIL_HOST_USER = ''
 # 对应用户的密码
-EMAIL_HOST_PASSWORD = '17660636600'
+EMAIL_HOST_PASSWORD = ''
