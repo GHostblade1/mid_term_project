@@ -1,0 +1,77 @@
+<style>
+	.table1{
+		border-color:rgba(180,207,207,0.4);
+	}
+	.td1,.td2{
+		height: 36px;
+	}
+	.td1{
+		text-align: right;
+		padding-right: 5px;
+		background-color: rgb(230,242,254);
+		font-size: 14px;
+	}
+	.td2{
+		padding-left: 5px;
+	}	
+</style>
+<form action="#">
+<table class="table1" border="1" cellspacing="0" width="1110px">
+	<tr>
+		<td class="td1">子类名称:</td>
+		<td class="td2"><input type="text" id="child_claas_name" name="child_claas_name"/></td>
+	</tr>
+{#	<tr>#}
+{#		<td class="td1">子类数量:</td>#}
+{#		<td class="td2"><input type="text" id="child_claas_num" name="child_claas_num"/></td>#}
+{#	</tr>#}
+	<tr>
+		<td class="td1">父类名称:</td>
+		<td class="td2">
+			<select id="p_c_name">
+                {% for i in class1 %}
+				<option  value="{{ i.id }}" name="parent_class">{{ i.name }}</option>
+                {% endfor %}
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td style="padding-left: 24%;" colspan="2">
+			<input type="button" value="提交" onclick="add_c_c()"/>
+			<input type="reset" value="重置"/>
+		</td>
+	</tr>
+</table></form>
+<script>
+    function add_c_c() {
+        var xhr;
+        var c_name = document.getElementById('child_claas_name').value
+        var p_c = document.getElementById('p_c_name')
+        var index = p_c.selectedIndex
+        var p_c_id = p_c.options[index].value
+
+        if (window.ActiveXObject){
+            xhr = new ActiveXObject("Microsoft.XMLHTTP")
+        }else if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest()
+        }
+
+        xhr.open('POST','{% url "commodity:add_c_c" %}',true);
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded", "X-CSRFToken", '{{ csrf_token }}');
+        {#console.log(name);#}
+        xhr.send("c_name="+c_name+"&p_c_id="+p_c_id+"&csrfmiddlewaretoken="+"{{ csrf_token }}");
+        xhr.onreadystatechange=function()
+        {
+            if(xhr.readyState==4 && xhr.status==200){
+                console.log('444')
+                var text = xhr.responseText;   //获得字符串形式的响应数据
+                console.log('text='+text);
+                if (text=='1'){
+                    alert('添加成功！')
+                }else{
+                    alert('添加失败！')
+                }
+            }
+        }
+    }
+</script>

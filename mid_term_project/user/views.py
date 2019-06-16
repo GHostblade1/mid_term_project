@@ -56,18 +56,25 @@ def user_confirm(request):
     :param request: 用户发来的验证码
     :return:
     """
-    user_code = request.GET.get('code')
-    user = request.GET.get('user')
-    confirm = models.Confirm_string.objects.get(code=user_code)
-    if confirm:
-        # 将用户状态改为可登陆
-        request.session['user'] = user
-        TUser.objects.filter(email_addr=user)[0].state = 1
-        # 删除验证码
-        return redirect('user:register_ok_re')
-    else:
-        #return redirect('user:register_ok')
-        return HttpResponse('验证失败')
+    try:
+        with transaction.atomic():
+            user_code = request.GET.get('code')
+            user = request.GET.get('user')
+            confirm = models.Confirm_string.objects.get(code=user_code)
+            if confirm:
+                # 将用户状态改为可登陆
+                request.session['user'] = user
+                TUser.objects.filter(email_addr=user)[0].state = 1
+                # 删除验证码
+                return redirect('user:register_ok_re')
+            else:
+                #return redirect('user:register_ok')
+                return HttpResponse('验证失败')
+    except:
+        print('出现异常！')
+        return HttpResponse('<h1>邮箱验证异常</h1>'
+                            '<a href="/user/register/">点击跳转回到注册界面！</a>')
+
 
 def login(request):
     #request.session['register'] = 'ok'
@@ -81,7 +88,22 @@ def login(request):
     if TUser.objects.filter(email_addr=name1, password=pwd1, state=1).count():
         request.session['user'] = name1
         #request.session['login'] = 'ok'
-        return redirect('main:index')
+        res = redirect('main:index')
+        if request.session.get('html') == 'index':
+            res = redirect('main:index')
+        elif request.session.get('html') == 'booklist':
+            booklist_id1 = request.session.get('booklist_id1')
+            booklist_id2 = request.session.get('booklist_id2')
+            num = request.session.get('num')
+            res = redirect('/book/booklist/?id1={}&id2={}&num={}'.format(booklist_id1, booklist_id2, num))
+        elif request.session.get('html') == 'book_details':
+            book_id = request.session.get('book_id')
+            res = redirect('/book/book_details/?id={}'.format(book_id))
+        elif request.session.get('html') == 'car_f':
+            res = redirect('car:car_f')
+        elif request.session.get('html') == None:
+            res = redirect('main:index')
+        return res
     return render(request, 'login.html')
 
 

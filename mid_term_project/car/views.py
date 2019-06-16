@@ -59,7 +59,7 @@ def indent_ok(request):
                 for i in cart.cart_item:
                     TOrderitem.objects.create(book_id=i.book.id, item_number=i.amount, subtotal=i.book.dang_price*i.amount, order_id=order_id)
                 request.session['cart'] = None
-                return render(request, 'indent ok.html', {'state': state, 'user': user, 'number': number, 'cart': cart, 'user1': login_user1})
+                return render(request, 'indent ok.html', {'state': state, 'user': user, 'number': number, 'cart': cart, 'user1': login_user1, 'ship_man': ship_man})
             else:
                 request.session['cart'] = None
                 return redirect('user:login')
