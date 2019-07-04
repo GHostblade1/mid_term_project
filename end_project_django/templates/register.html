@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- font files  -->
+<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+<!-- /font files  -->
+<!-- css files -->
+<link href="/static/css/style.css" rel='stylesheet' type='text/css' media="all" />
+<!-- /css files -->
+</head>
+<body>
+<h1>Register</h1>
+<div class="log">
+	<div class="content2">
+		<h2>Register</h2>
+		<form method="post" action="{% url 'user:login' %}">
+            {% csrf_token %}
+			<div><input id="user_name" type="text" name="userid" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'NAME AND SURNAME';}else {check_name()}"></div>
+            <div><span id="spn_username_ok1" ></span></div>
+			<div><input id="user_phone" type="tel" name="usrtel" value="PHONE" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PHONE';}else {check_phone()}"></div>
+            <div><span id="spn_username_ok2" ></span></div>
+			<div><input type="email" name="email" value="EMAIL ADDRESS" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'EMAIL ADDRESS';}"></div>
+{#            <div><span id="spn_username_ok3" ></span></div>#}
+			<div><input id="user_pwd" type="password" name="psw" value="PASSWORD" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PASSWORD';}else {check_pwd()}"></div>
+            <div><span id="spn_username_ok3" ></span></div>
+			<input type="submit" class="register" value="Register">
+		</form><input type="button" class="register" value="login" onclick="ll()">
+	</div>
+    <script>
+        function ll() {
+            location.href = '{% url "user:login" %}'
+        }
+    </script>
+	<div class="clear"></div>
+</div>
+<div class="footer">
+	<p>Copyright &copy;  <a href="http://www.baizhiedu.com/" target="_blank" title="百知教育">百知教育</a></p>
+</div>
+<script>
+    function check_name() {
+        {#var icon = document.getElementById('spn_username_ok')#}
+        var icon1 = document.getElementById('spn_username_ok1')
+        var name = document.getElementById('user_name').value
+        var xhr;
+        if (window.ActiveXObject){
+            xhr = new ActiveXObject("Microsoft.XMLHTTP")
+        }else if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest()
+        }
+
+        xhr.open('get','{% url "user:re_check_name" %}?name='+name,true);
+        xhr.send();
+        xhr.onreadystatechange=function()
+        {
+            if(xhr.readyState==4 && xhr.status==200){
+                console.log('444')
+                var text = xhr.responseText;   //获得字符串形式的响应数据
+                console.log('text='+text);
+                if (text=='1'){
+                    {#icon.setAttribute('class','icon_wrong')#}
+                    icon1.setAttribute('style','color:green');
+                    icon1.innerHTML = '正确的用户名！'
+{#                    document.getElementById('J_submitRegister').onclick = function(){alert("用户名已存在！"); };#}
+{#                    document.getElementById('hdn_username').value = '0'#}
+                }else if(text== '0'){
+                    {#icon.setAttribute('class','icon_wrong')#}
+                    {#document.getElementById('hdn_username').value = '0'#}
+                    icon1.setAttribute('style','color:red');
+                    icon1.innerHTML = '请输入正确的用户名！'
+                }else{
+                    {#icon.setAttribute('class','icon_yes')#}
+                    {#document.getElementById('hdn_username').value = '1'#}
+                    icon1.setAttribute('style','color:green');
+                    icon1.innerHTML = '用户名可用！'
+                }
+            }
+        }
+
+    }
+    function check_phone() {
+        {#var icon = document.getElementById('spn_username_ok')#}
+        var icon1 = document.getElementById('spn_username_ok2')
+        var user_phone = document.getElementById('user_phone').value
+        var xhr;
+        if (window.ActiveXObject){
+            xhr = new ActiveXObject("Microsoft.XMLHTTP")
+        }else if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest()
+        }
+
+        xhr.open('get','{% url "user:re_check_phone" %}?user_phone='+user_phone,true);
+        xhr.send();
+        xhr.onreadystatechange=function()
+        {
+            if(xhr.readyState==4 && xhr.status==200){
+                console.log('444')
+                var text = xhr.responseText;   //获得字符串形式的响应数据
+                console.log('text='+text);
+                if (text=='1'){
+                    {#icon.setAttribute('class','icon_wrong')#}
+                    icon1.setAttribute('style','color:green');
+                    icon1.innerHTML = '正确的电话号码！'
+{#                    document.getElementById('J_submitRegister').onclick = function(){alert("用户名已存在！"); };#}
+{#                    document.getElementById('hdn_username').value = '0'#}
+                }else if(text== '0'){
+                    {#icon.setAttribute('class','icon_wrong')#}
+                    {#document.getElementById('hdn_username').value = '0'#}
+                    icon1.setAttribute('style','color:red');
+                    icon1.innerHTML = '请输入正确的电话号码！'
+                }else{
+                    {#icon.setAttribute('class','icon_yes')#}
+                    {#document.getElementById('hdn_username').value = '1'#}
+                    icon1.setAttribute('style','color:green');
+                    icon1.innerHTML = '电话号码可用！'
+                }
+            }
+        }
+
+    }
+    function check_pwd() {
+        {#var icon = document.getElementById('spn_username_ok')#}
+        var icon1 = document.getElementById('spn_username_ok3')
+        var user_pwd = document.getElementById('user_pwd').value
+        var xhr;
+        if (window.ActiveXObject){
+            xhr = new ActiveXObject("Microsoft.XMLHTTP")
+        }else if(window.XMLHttpRequest){
+            xhr = new XMLHttpRequest()
+        }
+
+        xhr.open('get','{% url "user:re_check_pwd" %}?user_pwd='+user_pwd,true);
+        xhr.send();
+        xhr.onreadystatechange=function()
+        {
+            if(xhr.readyState==4 && xhr.status==200){
+                console.log('444')
+                var text = xhr.responseText;   //获得字符串形式的响应数据
+                console.log('text='+text);
+                if (text=='1'){
+                    {#icon.setAttribute('class','icon_wrong')#}
+                    icon1.setAttribute('style','color:green');
+                    icon1.innerHTML = '密码可用！'
+{#                    document.getElementById('J_submitRegister').onclick = function(){alert("用户名已存在！"); };#}
+{#                    document.getElementById('hdn_username').value = '0'#}
+                }else if(text== '0'){
+                    {#icon.setAttribute('class','icon_wrong')#}
+                    {#document.getElementById('hdn_username').value = '0'#}
+                    icon1.setAttribute('style','color:red');
+                    icon1.innerHTML = '请输入正确的密码！'
+                }else{
+                    {#icon.setAttribute('class','icon_yes')#}
+                    {#document.getElementById('hdn_username').value = '1'#}
+                    icon1.setAttribute('style','color:green');
+                    icon1.innerHTML = '密码可用！'
+                }
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

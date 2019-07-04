@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4f1ea75-d468-4be9-b081-b86f29c91f2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../dis_zl/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sjjy_crawler/BFS.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sjjy_crawler/DFS.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sjjy_crawler/ips.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sjjy_crawler/ip代理池.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sjjy_crawler/sjjy.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sjjy_crawler/sjjy_start.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/street_network/street_network/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/street_network/street_network/proxies.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/street_network/street_network/proxies.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/street_network/street_network/spiders/sn_spider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mid_term_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mid_term_project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,84 +19,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/street_network/street_network/middlewares.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="116" column="29" selection-start-line="116" selection-start-column="29" selection-end-line="118" selection-end-column="37" />
-              <folding>
-                <element signature="e#3779#3792#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/street_network/street_network/proxies.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/street_network/street_network/proxies.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="58" column="18" lean-forward="true" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
-              <folding>
-                <element signature="e#24#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/street_network/street_network/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="59" column="3" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="59" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/street_network/street_network/pipelines.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/street_network/street_network/spiders/sn_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
+            <state relative-caret-position="-135">
+              <caret line="10" column="39" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="39" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/street_network/street_network/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/street_network/street_network/items.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -147,9 +75,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-26" />
-    <option name="y" value="25" />
-    <option name="width" value="1831" />
+    <option name="x" value="377" />
+    <option name="y" value="21" />
+    <option name="width" value="1484" />
     <option name="height" value="995" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -158,41 +86,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="street_network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="street_network" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="street_network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="street_network" type="462c0819:PsiDirectoryNode" />
-              <item name="street_network" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="street_network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="street_network" type="462c0819:PsiDirectoryNode" />
-              <item name="street_network" type="462c0819:PsiDirectoryNode" />
-              <item name="street_network" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="street_network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="street_network" type="462c0819:PsiDirectoryNode" />
-              <item name="street_network" type="462c0819:PsiDirectoryNode" />
-              <item name="street_network" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/street_network/street_network" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/爬虫/爬虫/code" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -263,8 +163,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.proxies" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -278,45 +178,58 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560764488666</updated>
-      <workItem from="1560764490215" duration="11569000" />
+      <workItem from="1560764490215" duration="12573000" />
+      <workItem from="1560817894153" duration="1837000" />
+      <workItem from="1560841540154" duration="665000" />
     </task>
+    <task id="LOCAL-00001" summary="scrapy_street_network">
+      <created>1560782575556</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560782575556</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11569000" />
+    <option name="totallyTimeSpent" value="15075000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-26" y="25" width="1831" height="995" extended-state="1" />
-    <editor active="true" />
+    <frame x="377" y="21" width="1484" height="995" extended-state="0" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12365895" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15660113" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" weight="0.329849" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" weight="0.21370499" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329849" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329849" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.329849" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.21370499" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="scrapy_street_network" />
+    <option name="LAST_COMMIT_MESSAGE" value="scrapy_street_network" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/street_network$proxies.coverage" NAME="proxies Coverage Results" MODIFIED="1560771169157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/street_network/street_network" />
+    <SUITE FILE_PATH="coverage/street_network$proxies.coverage" NAME="proxies Coverage Results" MODIFIED="1560822140329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/street_network/street_network" />
     <SUITE FILE_PATH="coverage/street_network$main.coverage" NAME="main Coverage Results" MODIFIED="1560775769206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/street_network/street_network" />
   </component>
   <component name="editorHistoryManager">
@@ -327,26 +240,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/street_network/street_network/proxies.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/street_network/street_network/proxies.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="58" column="18" lean-forward="true" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
-          <folding>
-            <element signature="e#24#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/street_network/street_network/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
+        <state relative-caret-position="3024">
           <caret line="116" column="29" selection-start-line="116" selection-start-column="29" selection-end-line="118" selection-end-column="37" />
           <folding>
             <element signature="e#3779#3792#0" expanded="true" />
@@ -354,12 +250,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/street_network/street_network/settings.py">
+    <entry file="file://$PROJECT_DIR$/street_network/street_network/proxies.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="59" column="3" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="59" selection-end-column="3" />
+        <state relative-caret-position="-13">
+          <caret line="94" column="19" lean-forward="true" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/street_network/street_network/proxies.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/street_network/street_network/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="59" column="3" selection-start-line="54" selection-start-column="9" selection-end-line="59" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/street_network/scrapy.cfg">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/street_network/street_network/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -367,6 +283,12 @@
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/street_network/street_network/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/street_network/street_network/spiders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/street_network/street_network/items.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -377,8 +299,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/street_network/street_network/spiders/sn_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
+        <state relative-caret-position="-135">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="39" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

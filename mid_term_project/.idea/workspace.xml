@@ -2,135 +2,162 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee8a7f60-50d4-4ec1-9244-d25f68156e81" name="Default Changelist" comment="修改了部分bug。时间2019.5.26">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodity/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodity/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodity/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodity/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodity/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodity/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodity/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commodity/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/build.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/bs3/bui-min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/bs3/bui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/bs3/dpl-min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/bs3/dpl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/bui-min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/dpl-min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/main-min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/page-min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/css/prettify.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/calendar-200-300.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/chart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/check_icon-100-100.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/checkbox.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/hide_list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/icon-806-614.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/left-slib.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/load-16-16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/main-nav-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/main-nav-bg1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/menu-500-188.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/menu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/nav.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/nav_selected.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/radio_icon-64-40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/resource.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/separator-2-340.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/sprite-469-300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/tab-140-120.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/table-191-450.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/tool-sprites.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/tree.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/tree_icon-80-100.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/ui-img-view-height.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/ui-img-view-height.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/ui-img-view-width.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/ui-img-view-width.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/white_sprite-469-300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/bui-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/bui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/chart-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/common/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/common/main-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/common/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/common/page-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/common/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/common/search-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/common/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/config-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/extensions/treegrid-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/extensions/treepicker-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/graphic-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery-1.8.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/module/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/prettify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/slider-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/INSTALL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/KEYS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/NOTICE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/WHATSNEW" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/ant" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/ant.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/ant.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/antRun" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/antRun.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/antRun.pl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/antenv.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/complete-ant-cmd.pl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/envset.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/lcp.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/runant.pl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/runant.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/bin/runrc.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/ant-bootstrap.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/changelog.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/checkstyle/checkstyle-frames.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/checkstyle/checkstyle-text.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/checkstyle/checkstyle-xdoc.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/coverage-frames.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/jdepend-frames.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/jdepend.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/junit-frames-xalan1.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/junit-frames.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/junit-noframes.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/log.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/maudit-frames.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/mmetrics-frames.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/etc/tagdiff.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/fetch.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/ant/get-m2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/tools/yuicompressor.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/dzlist.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/splb.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/zjsp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/zjzlb.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Netease_nusic/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Netease_nusic/selenium_nn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/ip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/ips.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/ip代理池.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/items.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/middlewares.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/pipelines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/proxies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/proxies.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/spiders/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/first/spiders/zhilianSpider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_scrapy/scrapy.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_spiders/1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_spiders/wsc_spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boss_spiders/wsc_zl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../c_teachers/c_teachers/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../c_teachers/c_teachers/spiders/c_teachers_spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/excel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/txt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/买买提·阿不力米提_13601265843.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/买买提·阿不力米提_15525023793.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/伍啊三_18600521551.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/何阿红_17610679090.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/倪明啊_13032166612.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/关啊宁_17331268430.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/努尔艾力·阿卜力米提_18330401087.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/卡哈尔·阿帕尔_15231195029.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/卡哈尔·阿帕尔_15732783805.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/古丽尼莎汗·阿不力米提_17611459636.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/吉克阿铁_18712852106.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/吉尔阿且_18002401311.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/哈力玛·阿得力阿肯木_15020263819.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/啊地_18233250767.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/啊迪力·先米西丁_18911576335.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/帕塔尔·阿帕尔_13555354150.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/帕塔尔·阿帕尔_18630288068.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/帕它尔·阿斯木_15028576635.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/应阿屏_18770913791.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/张啊五_15116985792.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/张啊五_15222305097.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/张阿敏_15726120833.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/方啊顺_15633588700.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/木拉力别克·阿斯勒别克_18603691690.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/李啊想_15620864296.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/杜啊阑_17612218203.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/林啊二_13383164791.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/林啊顿_13001237377.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/沙努啊什·哈乃_13931021530.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/洪阿忐_13117537523.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/浦阿二_15161861822.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/浦阿二_18071109553.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/玉山江·吐尔逊阿洪_18401480905.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/翁啊字_13011043139.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/翁啊字_15075369119.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/翁啊字_15711467996.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/翁啊字_17788127018.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/艾尼瓦尔·阿帕尔_18310490117.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/苏啊哩_17717778742.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/薛阿芬_18310849598.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/许啊好_13230576734.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/诺肖尔邦·阿帕尔_13718723848.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/赖阿桃_13051695052.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/赖阿桃_15933605067.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/赖阿桃_18940103863.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/长孙啊文_19920040414.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿不力克木·斯提娃克_18704501883.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿不力米提·卡德尔_13722513330.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿不来提·阿帕尔_13522318062.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿不来提·阿帕尔_18845596815.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿不都克力木·阿不力米提_15536891721.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿不都阿帕尔·阿布都吉力力_15031203591.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿以夏木汉_18401671462.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿以拉千_18902114813.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿依努尔·阿不得阿合曼_15197238137.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿六尔哈_13343139220.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿六尔哈_18303311201.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿力甫·阿帕尔_13230609966.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿力甫·阿帕尔_15201667705.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿力甫·阿帕尔_15810949022.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿力甫·阿帕尔_17631421917.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿地力·亚森_15043851699.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿地力·外力_15512006159.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿布都森·阿斯木_13840079972.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿希木江·热合曼江_17703119077.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·买买提_15040968684.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·买买提_17072549289.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·依拉音_13439436558.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·依拉音_13894841894.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·依拉音_15364919981.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·依拉音_18522213378.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·依米提_13920721707.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·加帕尔_15032445733.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·加帕尔_15822783002.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·吐尔逊_18233281171.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·沙塔尔_18686759675.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·沙塔尔_18704654735.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·胡加甫_15965739156.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·胡加甫_18633389053.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·胡吉_18201490449.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿帕尔·阿不都热合曼_15122729552.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿提坎木·阿布拉_17803325096.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿日古娜_15771342077.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿日棍巴图_15127450288.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿民乌日图_15690102729.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿米娜·阿不力米提_18333161365.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿达尔图_15035646046.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿都木不_18785045847.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/阿里木·阿帕尔_17601020599.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/陈啊不_17788296537.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/陈阿洪_13820926022.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/陈阿红_15133787237.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/顾阿五_15033359592.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/黄啊逐_17610528951.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/黄啊逐_18142200161.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/黄啊逐_18330367899.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/黎建啊_15175749356.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/黎建啊_18618161875.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/word/黎建啊_18902052630.doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/数据1.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/数据2.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_cleansing/数据3.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_item/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_item_whjsw/end_item_whjsw/GB2312汉字.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_item_whjsw/end_item_whjsw/ips.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_item_whjsw/end_item_whjsw/ip代理池.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_item_whjsw/end_item_whjsw/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_item_whjsw/end_item_whjsw/spiders/whjsw_spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_item_zlg/end_item_zlg/GB2312汉字.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_item_zlg/end_item_zlg/ips.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_item_zlg/end_item_zlg/ip代理池.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_item_zlg/end_item_zlg/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_item_zlg/end_item_zlg/spiders/zpg_spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_project_django/info/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_project_django/templates/introduce.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_project_django/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_project_django/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_project_django/templates/menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_project_django/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../end_project_django/user/urls.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sjjy_crawler/BFS.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sjjy_crawler/DFS.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sjjy_crawler/ips.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sjjy_crawler/ip代理池.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sjjy_crawler/sjjy.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sjjy_crawler/sjjy_start.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mid_term_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mid_term_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dis_zl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dis_zl/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mid_term_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mid_term_project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Book details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Book details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/indent ok.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/indent ok.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../street_network/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../street_network/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,31 +171,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/main/add.html">
+        <entry file="file://$PROJECT_DIR$/commodity/apps.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="95" column="9" lean-forward="true" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+            <state relative-caret-position="5373">
+              <caret line="210" column="66" selection-start-line="210" selection-start-column="66" selection-end-line="210" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mid_term_project/settings.example.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="613">
+              <caret line="147" column="24" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commodity/admin.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commodity/apps.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/user/views.py">
+        <entry file="file://$PROJECT_DIR$/templates/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="153" column="23" selection-start-line="153" selection-start-column="23" selection-end-line="153" selection-end-column="23" />
+            <state relative-caret-position="2241">
+              <caret line="83" column="66" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1558856327049" expanded="true" signature="10182:10223" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -187,7 +221,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commodity/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
+            <state relative-caret-position="3051">
               <caret line="116" column="60" selection-start-line="116" selection-start-column="60" selection-end-line="116" selection-end-column="60" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
@@ -204,7 +238,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Book details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
+            <state relative-caret-position="6156">
               <caret line="228" column="36" selection-start-line="227" selection-start-column="9" selection-end-line="228" selection-end-column="36" />
             </state>
           </provider>
@@ -299,7 +333,6 @@
         <option value="$PROJECT_DIR$/templates/register confirm.html" />
         <option value="$PROJECT_DIR$/car/views.py" />
         <option value="$PROJECT_DIR$/templates/indent ok.html" />
-        <option value="$PROJECT_DIR$/user/views.py" />
         <option value="$PROJECT_DIR$/templates/Book details.html" />
         <option value="$PROJECT_DIR$/mid_term_project/urls.py" />
         <option value="$PROJECT_DIR$/templates/main/index.html" />
@@ -311,12 +344,13 @@
         <option value="$PROJECT_DIR$/commodity/urls.py" />
         <option value="$PROJECT_DIR$/commodity/views.py" />
         <option value="$PROJECT_DIR$/templates/main/list.html" />
+        <option value="$PROJECT_DIR$/user/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="56" />
-    <option name="y" value="29" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="17" />
+    <option name="y" value="26" />
     <option name="width" value="1739" />
     <option name="height" value="995" />
   </component>
@@ -362,12 +396,6 @@
               <item name="mid_term_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="mid_term_project" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mid_term_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mid_term_project" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mid_term_project" type="b2602c69:ProjectViewProjectNode" />
@@ -534,7 +562,11 @@
       <workItem from="1559782758693" duration="685000" />
       <workItem from="1560060656007" duration="3381000" />
       <workItem from="1560083856490" duration="1555000" />
-      <workItem from="1560682450826" duration="280000" />
+      <workItem from="1560682450826" duration="1304000" />
+      <workItem from="1560731719928" duration="2438000" />
+      <workItem from="1560781066725" duration="1108000" />
+      <workItem from="1561962355349" duration="2861000" />
+      <workItem from="1562027377724" duration="720000" />
     </task>
     <task id="LOCAL-00001" summary="修改了部分bug。时间2019.5.26">
       <created>1558879643395</created>
@@ -543,11 +575,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558879643395</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改了部分bug。时间2019.5.26">
+      <created>1560682739556</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560682739556</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77670000" />
+    <option name="totallyTimeSpent" value="85821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -559,9 +598,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="29" width="1739" height="995" extended-state="0" />
+    <frame x="17" y="26" width="1739" height="995" extended-state="1" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12388326" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.128648" />
       <window_info id="Structure" order="1" weight="0.15191898" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -570,7 +609,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32868758" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.16840883" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329849" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49573562" weight="0.28803718" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.17886178" />
@@ -617,7 +656,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="修改了部分bug。时间2019.5.26" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa14880.48302/项目原型/login.html" />
     <entry file="file://$PROJECT_DIR$/middle/session.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -724,16 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2241">
-          <caret line="83" column="66" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
-          <folding>
-            <marker date="1558856327049" expanded="true" signature="10182:10223" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/assets/js/bui.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -833,13 +861,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mid_term_project/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2349">
-          <caret line="87" column="28" selection-start-line="82" selection-start-column="8" selection-end-line="87" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/mid_term_project/settings.py" />
     <entry file="file://$PROJECT_DIR$/main/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5373">
@@ -882,20 +904,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commodity/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/main/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="95" column="9" lean-forward="true" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
+        <state relative-caret-position="2565">
+          <caret line="95" column="9" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -905,6 +917,26 @@
     <entry file="file://$PROJECT_DIR$/commodity/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5373">
+          <caret line="210" column="66" selection-start-line="210" selection-start-column="66" selection-end-line="210" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2241">
+          <caret line="83" column="66" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
+          <folding>
+            <marker date="1558856327049" expanded="true" signature="10182:10223" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/commodity/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -913,7 +945,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/commodity/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
+        <state relative-caret-position="3051">
           <caret line="116" column="60" selection-start-line="116" selection-start-column="60" selection-end-line="116" selection-end-column="60" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
@@ -926,18 +958,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Book details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
+        <state relative-caret-position="6156">
           <caret line="228" column="36" selection-start-line="227" selection-start-column="9" selection-end-line="228" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/views.py">
+    <entry file="file://$PROJECT_DIR$/commodity/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="153" column="23" selection-start-line="153" selection-start-column="23" selection-end-line="153" selection-end-column="23" />
+        <state relative-caret-position="432">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mid_term_project/settings.example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="147" column="24" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
         </state>
       </provider>
     </entry>
