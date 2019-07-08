@@ -13,7 +13,10 @@ def trace_func(func):
     '''
     def tmp(*args, **kargs):
         t = time.strftime("%Y-%m-%d %X",time.localtime())
+        print(15, args[0].META)
         ip = args[0].META['REMOTE_ADDR']
+        print(18, '本次访问的ip为', ip)
+        path = args[0].META['PATH_INFO']
         print(16, ip)
         if ip != '127.0.0.1':
             url = 'https://www.baidu.com/s?wd='+ip
@@ -28,20 +31,25 @@ def trace_func(func):
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
             }
             #url = 'https://www.baidu.com/s?wd=' + '172.15.10.11'
-            res = requests.get(url=url, headers=headers).text
-            #print(res)
-            html = etree.HTML(res)
-            node = html.xpath('//div[@class="c-span21 c-span-last op-ip-detail"]/table//text()')
-            print(node)
-            node1 = node[-1:]
-            node1[0] = node1[0].replace(' ', '')
-            node1[0] = node1[0].replace('\t', '')
-            node1[0] = node1[0].replace('\n', '')
-            addr = node1[0]
+            try:
+                res = requests.get(url=url, headers=headers).text
+                #print(res)
+                html = etree.HTML(res)
+                node = html.xpath('//div[@class="c-span21 c-span-last op-ip-detail"]/table//text()')
+                print(37, '地点', node)
+            
+                node1 = node[-1:]
+                node1[0] = node1[0].replace(' ', '')
+                node1[0] = node1[0].replace('\t', '')
+                node1[0] = node1[0].replace('\n', '')
+                addr = node1[0]
+            except:
+                print(45, '---地点未捕获---')
+                addr = '未知'
         else:
             addr = '本地'
-        a = '{}-在时间-{}-地点-{}-访问了-{}'.format(ip, t, addr, func.__name__)
-        TLog.objects.create(ip=ip, time=t, addr=addr, func=func.__name__)
+        a = '{}-在时间-{}-地点-{}-访问了-{}-url-{}'.format(ip, t, addr, func.__name__, path)
+        TLog.objects.create(ip=ip, time=t, addr=addr, func=func.__name__, url=path)
         print(a)
         return func(*args, **kargs)
     return tmp

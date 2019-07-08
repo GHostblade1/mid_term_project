@@ -1,7 +1,11 @@
 from django.shortcuts import render, redirect, HttpResponse
-import re, time, requests
+import re, time, requests, os, base64
 from info.models import TUser, TLog
 from lxml import etree
+from geetest import GeetestLib
+from django.contrib import auth
+from django.http import JsonResponse
+#from django.shortcuts import render
 # Create your views here.
 def trace_func(func):
     '''''
@@ -10,12 +14,16 @@ def trace_func(func):
     @trace_func
     def any_function(any parametet)
     '''
+
     def tmp(*args, **kargs):
-        t = time.strftime("%Y-%m-%d %X",time.localtime())
+        t = time.strftime("%Y-%m-%d %X", time.localtime())
+        print(15, args[0].META)
         ip = args[0].META['REMOTE_ADDR']
+        print(18, '本次访问的ip为', ip)
+        path = args[0].META['PATH_INFO']
         print(16, ip)
         if ip != '127.0.0.1':
-            url = 'https://www.baidu.com/s?wd='+ip
+            url = 'https://www.baidu.com/s?wd=' + ip
             headers = {
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -26,23 +34,28 @@ def trace_func(func):
                 'Upgrade-Insecure-Requests': '1',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
             }
-            #url = 'https://www.baidu.com/s?wd=' + '172.15.10.11'
-            res = requests.get(url=url, headers=headers).text
-            #print(res)
-            html = etree.HTML(res)
-            node = html.xpath('//div[@class="c-span21 c-span-last op-ip-detail"]/table//text()')
-            print(node)
-            node1 = node[-1:]
-            node1[0] = node1[0].replace(' ', '')
-            node1[0] = node1[0].replace('\t', '')
-            node1[0] = node1[0].replace('\n', '')
-            addr = node1[0]
+            # url = 'https://www.baidu.com/s?wd=' + '172.15.10.11'
+            try:
+                res = requests.get(url=url, headers=headers).text
+                # print(res)
+                html = etree.HTML(res)
+                node = html.xpath('//div[@class="c-span21 c-span-last op-ip-detail"]/table//text()')
+                print(37, '地点', node)
+                node1 = node[-1:]
+                node1[0] = node1[0].replace(' ', '')
+                node1[0] = node1[0].replace('\t', '')
+                node1[0] = node1[0].replace('\n', '')
+                addr = node1[0]
+            except:
+                print(45, '---地点未捕获---')
+                addr = '未知'
         else:
             addr = '本地'
-        a = '{}-在时间-{}-地点-{}-访问了-{}'.format(ip, t, addr, func.__name__)
-        TLog.objects.create(ip=ip, time=t, addr=addr, func=func.__name__)
+        a = '{}-在时间-{}-地点-{}-访问了-{}-url-{}'.format(ip, t, addr, func.__name__, path)
+        TLog.objects.create(ip=ip, time=t, addr=addr, func=func.__name__, url=path)
         print(a)
         return func(*args, **kargs)
+
     return tmp
 
 
@@ -106,3 +119,130 @@ def re_check_pwd(request):
         return HttpResponse('1')
     else:
         return HttpResponse('0')
+
+
+def login_code(request):
+    if request.method == "POST":
+        # 初始化一个给AJAX返回的数据
+        ret = {"status": 0, "msg": ""}
+        # 从提交过来的数据中 取到用户名和密码
+        username = request.POST.get("username")
+        pwd = request.POST.get("password")
+        # 获取极验 滑动验证码相关的参数
+        gt = GeetestLib(pc_geetest_id, pc_geetest_key)
+        challenge = request.POST.get(gt.FN_CHALLENGE, '')
+        validate = request.POST.get(gt.FN_VALIDATE, '')
+        seccode = request.POST.get(gt.FN_SECCODE, '')
+        status = request.session[gt.GT_STATUS_SESSION_KEY]
+        user_id = request.session["user_id"]
+
+        if status:
+            result = gt.success_validate(challenge, validate, seccode, user_id)
+        else:
+            result = gt.failback_validate(challenge, validate, seccode)
+        if result:
+            # 验证码正确
+            # 利用auth模块做用户名和密码的校验
+            user = auth.authenticate(username=username, password=pwd)
+            if user:
+                # 用户名密码正确
+                # 给用户做登录
+                auth.login(request, user)  # 将登录用户赋值给 request.user
+                ret["msg"] = "/index/"
+            else:
+                # 用户名密码错误
+                ret["status"] = 1
+                ret["msg"] = "用户名或密码错误！"
+        else:
+            ret["status"] = 1
+            ret["msg"] = "验证码错误"
+
+        return JsonResponse(ret)
+    return render(request, "login.html")
+# 请在官网申请ID使用，示例ID不可使用
+pc_geetest_id = "b46d1900d0a894591916ea94ea91bd2c"
+pc_geetest_key = "36fc3fe98530eea08dfc6ce76e3d24c4"
+
+
+# 处理极验 获取验证码的视图
+def get_geetest(request):
+    user_id = 'test'
+    gt = GeetestLib(pc_geetest_id, pc_geetest_key)
+    status = gt.pre_process(user_id)
+    request.session[gt.GT_STATUS_SESSION_KEY] = status
+    request.session["user_id"] = user_id
+    response_str = gt.get_response_str()
+    return HttpResponse(response_str)
+
+
+
+def loginFaceCheck(request):
+
+    ## 人脸登陆验证
+
+    if request.method == "POST" and request.is_ajax():
+        # 获取base64格式的图片
+        faceImage = request.POST.get('faceImg')
+        # 提取出base64格式，并进行转换为图片
+        index = faceImage.find('base64,')
+        base64Str = faceImage[index+6:]
+        img = base64.b64decode(base64Str)
+        # 将文件保存
+        backupDate = time.strftime("%Y%m%d_%H%M%S")
+        if int(request.POST.get('id')) == 0 :
+            fileName = BASE_LOGIN_LEFT_PATH +"LeftImg_%s.jpg" % (backupDate)
+        else:
+            fileName = BASE_LOGIN_RIGHT_PATH + "RightImg_%s.jpg" % (backupDate)
+        file = open(fileName, 'wb')
+        file.write(img)
+        file.close()
+        # 删除多余的图片
+        filesLeft = os.listdir(BASE_LOGIN_LEFT_PATH)
+        filesLeft.sort()
+        leftImgCount = filesLeft.__len__()
+        filesRight = os.listdir(BASE_LOGIN_RIGHT_PATH)
+        filesRight.sort()
+        RightImgCount = filesRight.__len__()
+
+        if leftImgCount > 100:
+            # 图片超过100个，删除一个
+            os.unlink(BASE_LOGIN_LEFT_PATH +filesLeft[0])
+        if RightImgCount > 100:
+            # 图片超过100个，删除一个
+            os.unlink(BASE_LOGIN_RIGHT_PATH + filesRight[0])
+
+        # 对图片进行人脸识别比对
+        canLogin = False
+        AuthName = "未授权用户"
+
+        # 1> 加载相机刚拍摄的人脸
+        unknown_face = face_recognition.load_image_file(fileName)
+        unknown_face_tmp_encoding = []
+        try:
+            unknown_face_tmp_encoding = face_recognition.face_encodings(unknown_face)[0]
+        except IndexError:
+            canLogin = False  # 图片中未发现人脸
+
+        # 2> 进行比对
+
+        ### 第一种方法
+        # results = face_recognition.face_distance(known_face,unknown_face_tmp_encoding)
+        # 小于0.6即对比成功。但是效果不好，因此我们设置阈值为0.4,
+        # for i, face_distance in enumerate(results):
+        #     if face_distance <= 0.4:
+        #         canLogin = True
+        #         AuthName = os.listdir(BASE_LOGIN_AUTH_PATH)[i][:-4]
+
+        ### 第二中方法
+        results1 = face_recognition.compare_faces(known_face,unknown_face_tmp_encoding,0.4)
+        for i, face_distance in enumerate(results1):
+            if face_distance == True:
+                canLogin = True
+                AuthName = os.listdir(BASE_LOGIN_AUTH_PATH)[i][:-4]
+
+        JsonBackInfo = {
+            "canLogin": canLogin,
+            "AuthName": AuthName
+        }
+
+        return JsonResponse(JsonBackInfo)

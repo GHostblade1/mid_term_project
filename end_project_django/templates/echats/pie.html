@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="/static/echarts/echarts.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '四个职位的人才数量对比饼状图'
+            },
+			tooltip: {},
+            legend: {
+                data:['人才数量']
+            },
+			{# xAxis: {},#}
+            {#yAxis: {},#}
+            series: [{
+                name: '人才数量',
+                //roseType:'radius',
+                //type: 'bar',
+                type:'pie',
+                data: [{name:'北京',value:{{bj}}},{name:'上海',value:{{sh}}},{name:'深圳',value:{{sz}}},{name:'广州',value:{{gz}}}]
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+		  // 异步加载数据
+        $.get('/get_pie_datas').done(function (data) {
+			 // data的格式{data:[{name:值,value:值}]}  {name:'北京',value:50},{name:'上海',value:100},
+             //填入数据
+            chart.setOption({
+                series: [{
+                    data:data.data
+                }]
+            });
+         });
+    </script>
+</body>
+</html>

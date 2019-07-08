@@ -239,7 +239,13 @@
 		 	<div id="nav_resource">
 		 		<ul id="dleft_tab1" class="ztree"></ul>
 		 	</div>
+             <div><a href="{% url 'echarts:bar' %}">—北上广深人才统计柱状图</a></div>
+             <div><a href="{% url 'echarts:broken_line' %}">—北上广深人才统计折线图</a></div>
+             <div><a href="{% url 'echarts:pie' %}">—北上广深人才统计饼状图</a></div>
+             <div><a href="{% url 'echarts:map' %}">—全国各地人才统计地图</a></div>
+             <div><a href="{% url 'echarts:globe' %}">—3d地球</a></div>
 		 </div>
+
 	</div>
 	<script type="text/javascript">
 		$(function(){

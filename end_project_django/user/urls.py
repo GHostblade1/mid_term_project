@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from user import views
-
+from django.conf.urls import url
 app_name = 'user'
 
 urlpatterns = [
@@ -28,4 +28,8 @@ urlpatterns = [
     path('re_check_name/', views.re_check_name, name='re_check_name'),
     path('re_check_phone/', views.re_check_phone, name='re_check_phone'),
     path('re_check_pwd/', views.re_check_pwd, name='re_check_pwd'),
+    url(r'^admin/', admin.site.urls),
+    url(r'^login_code/', views.login_code),
+    # 极验滑动验证码 获取验证码的url
+    url(r'^pc-geetest/register', views.get_geetest),
 ]

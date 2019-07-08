@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="/static/echarts/echarts.js"></script>
+    <script src="/static/echarts/china.js"></script>
+     <script src="/static/echarts/jquery-1.7.2.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var chart = echarts.init(document.getElementById('main'));
+        chart.setOption({
+            title: {
+                text: '各地人才的数量统计地图'
+            },
+            tooltip:{},
+            series: [{
+                name:'用户分布图',
+                type: 'map',
+                map: 'china',
+				data:[{name:'北京',value:{{bj}}},{name:'上海',value:{{sh}}},{name:'深圳',value:{{sz}}},{name:'广东',value:{{gz}}},
+                {name:'天津',value:{{tj}}},{name:'重庆',value:{{cq}}},{name:'河北',value:{{hb}}},{name:'山西',value:{{sx}}},
+                {name:'辽宁',value:{{ln}}},{name:'吉林',value:{{jl}}},{name:'黑龙江',value:{{hlj}}},{name:'江苏',value:{{js}}},
+                {name:'浙江',value:{{zj}}},{name:'安徽',value:{{ah}}},{name:'福建',value:{{fj}}},{name:'江西',value:{{jx}}},
+                {name:'山东',value:{{sd}}},{name:'河南',value:{{hn}}},{name:'湖北',value:{{hb2}}},{name:'湖南',value:{{hn2}}},
+                {name:'海南',value:{{hn2}}},{name:'四川',value:{{sc}}},{name:'贵州',value:{{gz}}},{name:'云南',value:{{yn}}},
+                {name:'陕西',value:{{sx2}}},{name:'甘肃',value:{{gs}}},{name:'青海',value:{{qh}}},{name:'西藏',value:{{xz}}},
+                {name:'广西',value:{{gx}}},{name:'内蒙古',value:{{nng}}},{name:'宁夏',value:{{nx}}},{name:'新疆',value:{{xj}}},
+                {name:'香港',value:{{xg}}},{name:'澳门',value:{{am}}},{name:'台湾',value:{{tw}}},]
+                //data:[{name:'北京',value:100},{name:'河北',value:1000}]
+            }]
+        });
+        // 异步加载数据
+        $.get('/get_map_datas').done(function (data) {
+			 // data的格式{data:[{name='省名',value:值}]}
+             //填入数据
+            chart.setOption({
+                series: [{
+                    data:data.data
+                }]
+            });
+         });
+    </script>
+</body>
+</html>

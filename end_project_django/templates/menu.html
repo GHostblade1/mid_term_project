@@ -53,8 +53,12 @@
 							<th>学校及专业</th>
 							<th>住址</th>
                             <th>婚否</th>
-                            <th>国籍</th>
+{#                            <th>国籍</th>#}
                             <th>政治面貌</th>
+                            <th>户籍</th>
+{#                            <th>期望行业</th>#}
+                            <th>目前情况</th>
+                            <th>期望职位</th>
 						</tr>
                         {% for p in page %}
 							<tr>
@@ -67,6 +71,13 @@
 								<td>{{ p.exper}}</td>
 								<td>{{ p.edu | slice:"16:30"}}</td>
 								<td>{{ p.addr }}</td>
+                                <td>{{ p.marry }}</td>
+{#                                <td>{{ p.nation }}</td>#}
+                                <td>{{ p.politics }}</td>
+                                <td>{{ p.census }}</td>
+{#                                <td>{{ p.job_ind }}</td>#}
+                                <td>{{ p.job_status }}</td>
+                                <td>{{ p.job_p }}</td>
 					
 							</tr>
                         {% endfor %}
